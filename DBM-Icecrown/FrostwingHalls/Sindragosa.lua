@@ -30,7 +30,7 @@ mod:AddBoolOption("RangeFrame", true) -- keep as BoolOption since the localizati
 mod:AddBoolOption("ClearIconsOnAirphase", true) -- don't group with any spellId, it applies to all raid icons
 
 -- Stage One
-mod:AddTimerLine(DBM_CORE_L.SCENARIO_STAGE:format(1))
+mod:AddTimerLine(DBM_CORE_L.SCENARIO_STAGE:format(1)..": 100% – 35%")
 local warnAirphase				= mod:NewAnnounce("WarnAirphase", 2, 43810)
 local warnGroundphaseSoon		= mod:NewAnnounce("WarnGroundphaseSoon", 2, 43810)
 local warnPhase2Soon			= mod:NewPrePhaseAnnounce(2)
@@ -67,7 +67,7 @@ mod:AddBoolOption("AnnounceFrostBeaconIcons", false, nil, nil, nil, nil, 70126)
 mod:AddBoolOption("AssignWarnDirectionsCount", true, nil, nil, nil, nil, 70126)
 
 -- Stage Two
-mod:AddTimerLine(DBM_CORE_L.SCENARIO_STAGE:format(2))
+mod:AddTimerLine(DBM_CORE_L.SCENARIO_STAGE:format(2)..": 35% – 0%")
 local warnPhase2				= mod:NewPhaseAnnounce(2, 2, nil, nil, nil, nil, nil, 2)
 local warnMysticBuffet			= mod:NewCountAnnounce(70128, 2, nil, false)
 
